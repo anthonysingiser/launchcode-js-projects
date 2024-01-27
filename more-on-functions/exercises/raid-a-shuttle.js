@@ -53,5 +53,33 @@ console.log("Hold status: " + holdStatus(cargoHold));
 	
 //b). Call your anonymous fuel and cargo functions from within irs.
 
-//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
+//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold." */
 
+const snackCheck = function (level) {
+  let diff = 0;
+  if (level > 100000){
+    while (level > 100000) {
+      --level;
+      ++diff;
+    }
+  }
+  return diff;
+}
+
+const snackGet = function (arr) {
+  let snack = [];
+  arr.map(function (x) {
+    if (x === 'gold' || x === 'satellite') {
+      snack.push(arr.splice(arr.indexOf(x), 1, 'bbq chips'));
+    }
+  });
+  return snack;
+}
+
+const irs = function (level, arr) {
+  let bag = snackCheck(level);
+  let snacks = snackGet(arr);
+  return `Raided ${bag} kg of fuel from the tanks, and stole ${snacks[0]} and ${snacks[1]} from the cargo hold.`;
+}
+
+console.log(irs(fuelLevel, cargoHold));
