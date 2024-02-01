@@ -18,5 +18,6 @@ const findSmallest = (arr) => {
 
 //Using one of the test arrays as the argument, call your function inside the 
 //console.log statement below.
-
+console.log(findSmallest(nums1));
+console.log(findSmallest(nums2));
 console.log(findSmallest(nums3));
