@@ -63,3 +63,22 @@ function crewReport(member){
 // Print out the relevant information about each animal.
 
 // Start an animal race!
+
+
+function fitnessTest(animalArr){
+   let raceResults = [];
+   animalArr.map((animal) => {
+      let steps = 0;
+      let turns = 0;
+      while(steps < 20){
+         steps += animal.steps
+         turns++
+      }
+      raceResults.push({name: animal.name, turns: turns})
+   })
+   return raceResults.forEach((animal)=> {
+      console.log(`${animal.name} took ${animal.turns} turns to take 20 steps.`);
+   })
+}
+
+fitnessTest(crew)
