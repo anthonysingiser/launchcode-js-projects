@@ -11,9 +11,9 @@ class Book {
     }
 }
 // Define your Manual and Novel classes here:
-
-
-
+class Novel extends Book {
+    
+}
 // Declare the objects for exercises 2 and 3 here:
 
 
