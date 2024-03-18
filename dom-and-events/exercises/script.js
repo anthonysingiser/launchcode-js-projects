@@ -24,7 +24,6 @@ function init () {
             paragraph.innerHTML = "Crisis Averted! The Mission continues!";
         }
     })
-
 }
 
 window.addEventListener("load", init);
